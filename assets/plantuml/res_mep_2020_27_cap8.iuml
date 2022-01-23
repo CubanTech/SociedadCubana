@@ -1,0 +1,57 @@
+@startuml
+|#gray|cam| CAM
+|#lightgreen|up| Unidad Presupuestada
+|#green|osde| OACE/OSDE
+|#pink|mfp| Dirección Municipal\nFinanzas y Precios
+|#yellow|bank| Presupuesto Central\ndel Estado
+
+|cam|
+start
+:Aprueba acuerdo;
+
+|up|
+fork
+:Solicita actualización\nde presupuesto;
+|osde|
+:Proceso de modificaciones\npresupuestarias;
+
+:Notifica aprobación\nde presupuesto;
+|up|
+fork
+:Presenta\ndesagregación mensual\nde recursos financieros;
+|mfp|
+:Planificación mensual\nde recursos financieros;
+fork again
+|osde|
+:Aprueba liberación\nde fondos;
+|bank|
+:Transferencia\nCuenta Distribuidora\nContribución Territorial;
+|mfp|
+fork
+:Debita cuenta 808;
+fork again
+:Acredita cuenta 118\nsubcuenta 0110;
+endfork
+endfork
+|mfp|
+fork
+|up|
+if (Proyecto terminado?) then (no)
+|up|
+:Ejecuta\nproyecto;
+else (sí)
+stop
+endif
+fork again
+|mfp|
+if (Mes con presupuesto?) then (sí)
+:Asigna\nfondos;
+|up|
+fork
+:Debita cuenta 109\nsubcuenta 0060;
+fork again
+:Acredita cuenta 954\nsubcuenta 0010\n(por municipio);
+endfork
+else (no)
+endif
+@enduml
