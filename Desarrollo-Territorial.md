@@ -7,7 +7,7 @@ El Presidente de la República de Cuba aprobó en fecha 27 de enero de 2021 el [
 
 - [Gobierno Provincial](https://www.gacetaoficial.gob.cu/es/gobierno-provincial)
 - [Consejos de Administración](https://www.gacetaoficial.gob.cu/es/consejo-de-la-administracion) Municipal
-- Actores locales que constituyen proyectos de desarrollo
+- Actores locales que constituyen [proyectos de desarrollo](Proyectos-de-Desarrollo-Local)
 
 ## Principales normativas
 
